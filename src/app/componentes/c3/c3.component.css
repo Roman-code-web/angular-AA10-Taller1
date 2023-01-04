@@ -1,0 +1,9 @@
+.form__input{
+    border-style: none;
+    border: 1px solid rgb(21, 142, 212);
+    border-radius: 5px;
+    outline: none;
+    padding: 10px 20px;
+    width: auto;
+    min-width: 300px;
+}
