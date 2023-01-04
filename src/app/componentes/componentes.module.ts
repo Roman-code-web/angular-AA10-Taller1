@@ -16,6 +16,12 @@ import { C4Component } from './c4/c4.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports:[
+    C1Component,
+    C2Component,
+    C3Component,
+    C4Component
   ]
 })
 export class ComponentesModule { }
