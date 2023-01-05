@@ -1,11 +1,14 @@
 <app-c1></app-c1>
-<main class="">
-    <div class="grid grid-col-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2  gap-4 p-10">
-        <div class="border">
-            <app-c3></app-c3>
+<main class="mt-10 mb-10">
+    <div class="mt-5 mb-10">
+        <h1 class="text-4xl text-center font-bold"> <i class="fa-solid fa-face-smile text-blue-600 "></i> {{titulo}}</h1>
+    </div>
+    <div class="grid w-full px-5 gap-6 md:grid-cols-2 ">
+        <div class="border div__form">
+            <app-c3 (onEnviarTarea)="listaTareaGlobal=$event" ></app-c3>
         </div>
-        <div class="border">
-            <app-c4></app-c4>
+        <div class="border div__form">
+            <app-c4 [listaTareaRecibida]="listaTareaGlobal"></app-c4>
         </div>
     </div>
 </main>

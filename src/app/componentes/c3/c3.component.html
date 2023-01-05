@@ -1,20 +1,24 @@
-<div class="mt-10 mb-10">
-    <div>   
-        <h1 class="text-center text-4xl font-bold">Tareas</h1>
+<div class="mt-10 mb-10 flex justify-center flex-col">
+    <div class="mb-10">   
+        <h2 class="text-center text-4xl font-bold">Tareas</h2>
     </div>
     <div>
-         <form class="flex flex-col justify-center items-center mt-10">
+         <form class="flex flex-col justify-center items-center w-3/4 mx-auto">
+            <!-------nombre----->
             <div class="mb-3">
-                <input class="form__input"  type="text" placeholder="ingresar nombre de tarea" #nomTarea autofocus>
+                <input class="form__input "  type="text" placeholder="ingresar nombre de tarea" #nomTarea autofocus>
             </div>
+            <!-------descripcion----->
             <div class="mb-3">
-                <textarea style="resize: none;" class="form__input" name="" id="" cols="10" rows="5" placeholder=" ingresar descripcion" #descripcion></textarea>
+                <textarea style="resize: none;" class="form__input " name="" id="" cols="10" rows="5" placeholder=" ingresar descripcion" #descripcion></textarea>
             </div>
+            <!-------validacion----->
             <div class="mb-3" *ngIf="validacion==false">
-                <p class="bg-rose-600 text-white p-2">{{mensaje}}</p>
+                <p class="bg-rose-600 text-white p-2 text-center"> <i class="fa-solid fa-circle-xmark"></i> {{mensaje}}</p>
             </div>
+            <!-------boton----->
             <div class="mb-3">
-                <button (click)="guardarTarea(nomTarea,descripcion)" class="bg-blue-600 rounded text-white py-2 px-5">Guardar</button>
+                <button (click)="guardarTarea(nomTarea,descripcion)" class="bg-blue-600 rounded text-white py-2 px-5 btn">Guardar</button>
             </div>
          </form>   
     </div>
